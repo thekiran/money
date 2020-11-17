@@ -1,7 +1,7 @@
 .footer-container {
 	width: 100vw;
-	margin: 2em 0 0 0;
-	padding: 0 0 5em 0;
+	margin: 0;
+	padding: 2em 0 5em 0;
 	font-family: Arial, Helvetica, sans-serif;
 	background: rgb(121, 10, 10);
 	color: #fff;
@@ -39,10 +39,13 @@
 }
 .link-list button i {
 	padding: 2em;
-	/* background: #000; */
-	color: #000;
+	background: rgb(121, 10, 10);
+	color: #fff;
+	transform: scale(1.5);
 }
-
+.link-list button i:hover {
+	color: rgba(255, 255, 255, 0.301);
+}
 .footer-showcase {
 	/* display: none; */
 	/* background: #000; */
@@ -71,4 +74,40 @@
 	text-align: center;
 	font-size: 0.9em;
 	margin: 2em 0;
+}
+footer {
+	position: relative;
+}
+.scroll-to-top {
+	position: absolute;
+	bottom: 20%;
+	right: 5%;
+	cursor: pointer;
+	/* background: red; */
+	height: 100px;
+	width: 100px;
+}
+
+.scroll-to-top a {
+	height: 100%;
+	width: 100%;
+	/* background: #000; */
+	opacity: 1;
+	position: relative;
+	color: transparent;
+}
+
+.scroll-to-top a::after {
+	content: '>';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 4em;
+	color: rgb(255, 255, 255);
+	transform: translate(-50%, -50%) rotate(-90deg);
+}
+@media (max-width: 1000px) {
+	.scroll-to-top {
+		display: none;
+	}
 }

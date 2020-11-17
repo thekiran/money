@@ -1,13 +1,34 @@
-import React from 'react'
+import React, { useRef, useCallback } from 'react'
 
 import apple from './img/apple.svg'
 import google from './img/play.svg'
 
 import './platform.css'
 const Platform = () => {
+	const observer = useRef(
+		new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					// console.log(entries[0].target.children[0])
+					// console.log(entries[0].target.children[1])
+					entries[0].target.children[0].classList.remove('anim')
+					entries[0].target.children[1].classList.remove('anim')
+				} else {
+					entries[0].target.children[0].classList.add('anim')
+					entries[0].target.children[1].classList.add('anim')
+				}
+			},
+			{
+				threshold: 0.75
+			}
+		)
+	)
+	const plat = useCallback((node) => {
+		if (observer.current) observer.current.observe(node)
+	})
 	return (
 		<div className='plat-container'>
-			<div className='plat-content'>
+			<div ref={plat} className='plat-content'>
 				<div className='plat'>
 					<div className='plat-head'>
 						<h1>Get the app.</h1>
@@ -22,19 +43,19 @@ const Platform = () => {
 					</div>
 					<div className='plat-review'>
 						<div className='plat-re'>
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
 							<span>4.8, 17.5K Ratings</span>
 						</div>
 						<div className='plat-re'>
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
-							<i class='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
+							<i className='fas fa-star' />
 							<span>4.5, 58.8K Ratings</span>
 						</div>
 					</div>
