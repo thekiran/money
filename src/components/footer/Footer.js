@@ -71,9 +71,9 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className='scroll-to-top'>
+			{/* <div className='scroll-to-top'>
 				<a href='main-header'>.</a>
-			</div>
+			</div> */}
 		</footer>
 	)
 }
