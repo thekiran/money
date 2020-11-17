@@ -19,6 +19,12 @@
 	/* padding: m 0; */
 	/* justify-content: center; */
 	/* align-items: center; */
+	transition: all 500ms;
+}
+
+.plat.anim {
+	opacity: 0;
+	transform: translateX(-300px);
 }
 .plat-head {
 	/* background: #000; */
@@ -67,7 +73,14 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
+	transition: all 500ms;
 }
+
+.hero-img.anim {
+	opacity: 0;
+	transform: translateX(300px);
+}
+
 .hero-img img {
 	max-width: 100%;
 }

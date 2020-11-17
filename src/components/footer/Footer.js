@@ -42,13 +42,13 @@ const Footer = () => {
 						<ul className='link-list'>
 							<p>Follow us</p>
 							<button>
-								<i className='fa fa-facebook-f' />
+								<i class='fab fa-facebook-f' />
 							</button>
 							<button>
-								<i className='fa fa-twitter' />
+								<i class='fab fa-twitter' />
 							</button>
 							<button>
-								<i className='fa fa-instagram' />
+								<i class='fab fa-instagram' />
 							</button>
 						</ul>
 					</div>
@@ -70,6 +70,9 @@ const Footer = () => {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className='scroll-to-top'>
+				<a href='main-header'>.</a>
 			</div>
 		</footer>
 	)

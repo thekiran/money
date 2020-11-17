@@ -1,9 +1,9 @@
 .instruction-container {
 	width: 100vw;
 	margin: 0;
-	padding: 01em 0 3em 0;
+	padding: 1em 0 3em 0;
 	font-family: 'Roboto';
-	background: rgba(248, 0, 0, 0.281);
+	background: #f8000048;
 	background: #000;
 	color: #fff;
 	perspective: 1000px;
@@ -13,12 +13,20 @@
 	max-width: 1300px;
 	margin: 0 auto;
 	/* background: rgba(253, 5, 5, 0.212); */
+	padding: 0 0 20px 0;
 }
 .ins-content .inst-title {
 	display: block;
 	/* background: #000; */
 	margin: 2em auto;
 	width: fit-content;
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: all 500ms;
+}
+.ins-content .inst-title.anim {
+	opacity: 1;
+	transform: translateY(0);
 }
 .inst-one {
 	grid-area: one;
@@ -40,7 +48,7 @@
 }
 
 .int-grid {
-	/* padding: 2em; */
+	padding: 2em 0;
 	display: grid;
 	grid-template-areas: 'one two three' 'four five six';
 	/* 'menu footer footer footer footer footer'; */
@@ -75,7 +83,22 @@
 .inst-cover {
 	padding: 1em;
 	background: #000;
-	animation: pulse 2s infinite;
+	/* animation: pulse 2s infinite; */
+	transform: translate(0);
+	opacity: 1;
+	transition: all 500ms;
+}
+.inst-cover.left {
+	opacity: 0;
+	transform: translateX(-200px);
+}
+.inst-cover.up {
+	opacity: 0;
+	transform: translateY(200px);
+}
+.inst-cover.right {
+	opacity: 0;
+	transform: translateX(200px);
 }
 .inst-cover:hover {
 	animation: none;
