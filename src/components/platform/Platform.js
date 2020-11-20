@@ -23,6 +23,7 @@ const Platform = () => {
 			}
 		)
 	)
+	// eslint-disable-next-line
 	const plat = useCallback((node) => {
 		if (observer.current) observer.current.observe(node)
 	})

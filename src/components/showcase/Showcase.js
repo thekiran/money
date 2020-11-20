@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Chart from './CustomChart'
 
 import './showcase.css'
 const Showcase = () => {
-	const [ rates, setRates ] = useState({})
-	const [ array, setArray ] = useState([])
+	// const [ rates, setRates ] = useState({})
+	// const [ array, setArray ] = useState([])
 
 	// let date = new Date("25 Mar 2015")
 	let d = new Date().toJSON().slice(0, 10)
@@ -75,24 +75,24 @@ const Showcase = () => {
 			}
 		}
 	}
-	useEffect(() => {
-		const url = 'https://api.exchangeratesapi.io/history?start_at=2020-09-01&end_at=2020-09-10&base=USD'
-		fetch(`${url}&symbols=EUR`).then((res) => res.json()).then((data) => setRates(data.rates))
-	}, [])
+	// useEffect(() => {
+	// 	const url = 'https://api.exchangeratesapi.io/history?start_at=2020-09-01&end_at=2020-09-10&base=USD'
+	// 	fetch(`${url}&symbols=EUR`).then((res) => res.json()).then((data) => setRates(data.rates))
+	// }, [])
 
-	useEffect(
-		() => {
-			const rate = Object.entries(rates)
-			const first = rate[0]
-			// console.log(first[1].EUR)
-			const dataArray = rate.map((r) => {
-				return Number(r[1].EUR)
-			})
-			// console.log(dataArray)
-			setArray(dataArray)
-		},
-		[ rates ]
-	)
+	// useEffect(
+	// 	() => {
+	// 		const rate = Object.entries(rates)
+	// 		// const first = rate[0]
+	// 		// console.log(first[1].EUR)
+	// 		const dataArray = rate.map((r) => {
+	// 			return Number(r[1].EUR)
+	// 		})
+	// 		// console.log(dataArray)
+	// 		setArray(dataArray)
+	// 	},
+	// 	[ rates ]
+	// )
 	return (
 		<div className='showcase-container'>
 			<div className='showcase-content'>
@@ -110,7 +110,10 @@ const Showcase = () => {
 					<Chart chartData={data.chartData} location='Massachusetts' legendPosition='bottom' />
 				</div>
 				<div className='btn-track'>
-					<a target='_blank' href='https://transferwise.com/tools/exchange-rate-alerts/'>
+					<a
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://transferwise.com/tools/exchange-rate-alerts/'>
 						Track this change
 					</a>{' '}
 				</div>

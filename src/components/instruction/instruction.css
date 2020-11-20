@@ -136,12 +136,28 @@
 	margin: 0 auto 2em auto;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1300px) {
+	.ins-content .inst-title {
+		opacity: 1;
+		transform: none;
+	}
 	.int-grid {
 		/* background: red; */
 		width: 80%;
 		margin: 0 auto;
 		grid-template-areas: 'one two' 'three four' 'five six';
+	}
+	.inst-cover.left {
+		opacity: 0;
+		transform: translateX(0px);
+	}
+	.inst-cover.up {
+		opacity: 0;
+		transform: translateY(0px);
+	}
+	.inst-cover.right {
+		opacity: 0;
+		transform: translateX(0px);
 	}
 }
 @media (max-width: 850px) {

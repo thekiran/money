@@ -27,6 +27,7 @@ const Review = () => {
 			}
 		)
 	)
+	// eslint-disable-next-line
 	const rev = useCallback((node) => {
 		if (observer.current) observer.current.observe(node)
 	})

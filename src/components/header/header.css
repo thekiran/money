@@ -141,7 +141,7 @@
 form {
 	position: relative;
 }
-input#calc-inp,
+input.calc-inp,
 input#calc-out {
 	display: block;
 	/* margin: 0em 20px 0 auto; */
@@ -159,7 +159,7 @@ input#calc-out {
 	/* padding: 0 0px 10px 10px; */
 }
 
-input#calc-inp:hover {
+input.calc-inp:hover {
 	border: none;
 }
 input:focus {
@@ -249,6 +249,10 @@ select {
 		text-align: center !important;
 		margin: 0 auto;
 	}
+	input.calc-inp {
+		background: red;
+		color: #fff;
+	}
 	.main-content {
 		/* background: red; */
 		max-width: 585px;
@@ -312,7 +316,7 @@ select {
 		position: absolute;
 		left: 90%;
 	}
-	input#calc-inp {
+	input.calc-inp {
 		left: 0;
 		width: 100%;
 	}

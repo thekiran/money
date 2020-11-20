@@ -6,8 +6,7 @@ const Currency = (props) => {
 		<React.Fragment>
 			<input
 				type='text'
-				id='calc-inp'
-				className='input'
+				className='input calc-inp'
 				disabled={disabled}
 				value={amount}
 				onChange={onChangeAmount}

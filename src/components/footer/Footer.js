@@ -42,13 +42,13 @@ const Footer = () => {
 						<ul className='link-list'>
 							<p>Follow us</p>
 							<button>
-								<i class='fab fa-facebook-f' />
+								<i className='fab fa-facebook-f' />
 							</button>
 							<button>
-								<i class='fab fa-twitter' />
+								<i className='fab fa-twitter' />
 							</button>
 							<button>
-								<i class='fab fa-instagram' />
+								<i className='fab fa-instagram' />
 							</button>
 						</ul>
 					</div>

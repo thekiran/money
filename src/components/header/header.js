@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import './header.css'
 
 import Currency from './Currency'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 
 const Header = () => {
 	const BASE_URL = 'https://api.exchangeratesapi.io/latest'

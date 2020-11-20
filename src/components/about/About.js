@@ -27,6 +27,7 @@ const About = () => {
 			}
 		)
 	)
+	// eslint-disable-next-line
 	const tar = useCallback((node) => {
 		if (observer.current) observer.current.observe(node)
 	})

@@ -33,6 +33,7 @@ const Instruction = () => {
 			}
 		)
 	)
+	// eslint-disable-next-line
 	const obs = useCallback((node) => {
 		if (observer.current) observer.current.observe(node)
 	})

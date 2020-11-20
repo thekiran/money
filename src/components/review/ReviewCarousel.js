@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Fragment } from 'react'
 import p1 from './img/carousel1.jpeg'
 import p2 from './img/carousel2.jpeg'
