@@ -1,0 +1,9 @@
+#main {
+	position: absolute;
+	top: 200%;
+	z-index: 9999999;
+}
+
+#animation h1 {
+	color: red;
+}

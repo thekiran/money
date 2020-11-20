@@ -28,27 +28,25 @@ const Navbar = () => {
 							Help
 						</Link>
 					</li>
-					<li className='nav' id='b'>
-						<a href='/' className='nav-link'>
-							Business
-						</a>
+					{/* <li className='nav' id='b'>
+						<button className='nav-link'>
+							
+						</button>
 						<ul id='sub-list'>
 							<li>
-								<button className='sub-link'>transfer money</button>
+								<button className='sub-link'></button>
 							</li>
 							<li>
-								<button className='sub-link'>transfer large amount </button>
+								<button className='sub-link'> </button>
 							</li>
-							{/* <li>
-                <button className='sub-link'>track money </button>
-              </li> */}
+						 
 						</ul>
-					</li>
-					<li className='nav'>
+					</li> */}
+					{/* <li className='nav'>
 						<Link to='/login' className='nav-link login'>
 							Login
 						</Link>
-					</li>
+					</li> */}
 					{/* <li className='nav'>
 						<a className='nav-link register'>Register</a>
 					</li> */}

@@ -94,13 +94,14 @@ body {
 	font-size: 25px;
 }
 .main-header {
-	padding: 0 0 6em 0;
-	margin-bottom: -3em;
+	padding: 0 0 5em 0;
+	margin-bottom: -4em;
 	background: #090302;
 	/* background: #080708; */
 	color: #fff;
 	color: #b80006;
-	clip-path: polygon(0 0, 0 100%, 100% calc(100% - 5vw), 100% 0);
+	clip-path: polygon(0 0, 0 100%, 100% calc(100% - 7vw), 100% 0);
+	/* position: relative; */
 }
 .space {
 	/* background: rgba(88, 88, 88, 0.986); */
@@ -108,7 +109,7 @@ body {
 	background-color: inherit;
 	/* height: 100px; */
 	width: 100vw;
-	z-index: 2;
+	/* z-index: 2; */
 }
 @media (max-width: 500px) {
 	.main-header {

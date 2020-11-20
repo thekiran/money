@@ -155,6 +155,7 @@ input#calc-out {
 	font-family: sans-serif;
 	border-bottom: 3px solid red;
 	border-left: 3px solid red;
+	color: red;
 	/* padding: 0 0px 10px 10px; */
 }
 

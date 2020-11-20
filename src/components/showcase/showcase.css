@@ -20,14 +20,13 @@
 	margin: 0 auto;
 	max-height: 850px;
 	/* box-shadow: 0 0 20px rgb(20, 3, 255); */
-	box-shadow: 0 0 50px rgb(255, 255, 255);
-	box-shadow: 0 0 50px rgb(255, 0, 0);
+	box-shadow: 0 0 10px rgb(255, 255, 255);
 	border-radius: 5%;
 	transition: all 250ms;
 	overflow: hidden;
 }
 .showcase-content:hover {
-	box-shadow: 0 0 100px rgb(255, 0, 0);
+	box-shadow: 0 0 20px rgb(255, 255, 255);
 	max-height: auto;
 }
 .show-box {
@@ -62,7 +61,7 @@
 	display: none;
 	width: fit-content;
 	background: #666666;
-	box-shadow: 0 0 10px green;
+	box-shadow: 0 0 10px white;
 	padding: 0.5em;
 	margin: 0.5em auto 1em auto;
 }
