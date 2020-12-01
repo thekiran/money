@@ -86,7 +86,7 @@ body {
 	width: 100vw;
 	height: auto;
 	overflow-x: hidden;
-	background: #1d201d;
+	background: #151615;
 	/* background: #ff333a; */
 	background: #b80006;
 	/* background-color: #666666; */
@@ -97,9 +97,9 @@ body {
 	padding: 0 0 5em 0;
 	margin-bottom: -4em;
 	background: #090302;
-	/* background: #080708; */
+	/* background: #2e2d2d; */
 	color: #fff;
-	color: #b80006;
+	color: red;
 	clip-path: polygon(0 0, 0 100%, 100% calc(100% - 7vw), 100% 0);
 	/* position: relative; */
 }

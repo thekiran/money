@@ -97,7 +97,7 @@
 	display: block;
 }
 .cur-list button {
-	background: red;
+	background: #000000;
 	color: #fff;
 	font-size: 1.3em;
 	width: 150px;
@@ -127,6 +127,7 @@
 	background: #fff;
 	display: block;
 	padding: 10px 0 0px 15px;
+	padding: 10px 0 0px 4px;
 	margin: 0em auto;
 	/* min-height: 30px; */
 	width: fit-content;
@@ -136,6 +137,8 @@
 	font-size: 0.7em;
 	border-top: 3px solid red;
 	border-left: 3px solid red;
+	
+	border: none;
 }
 
 form {
@@ -153,9 +156,10 @@ input#calc-out {
 	border: none;
 	font-size: 1.4em;
 	font-family: sans-serif;
-	border-bottom: 3px solid red;
-	border-left: 3px solid red;
+	/* border-bottom: 3px solid red; */
+	/* border-left: 3px solid red; */
 	color: red;
+	border: none;
 	/* padding: 0 0px 10px 10px; */
 }
 
@@ -168,9 +172,9 @@ input:focus {
 }
 .get-btn {
 	display: block;
-	background: rgb(1, 252, 168);
-	background: red;
-	color: #fff;
+	/* background: rgb(1, 252, 168); */
+	background: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
 	/* color: #fff; */
 	height: 3em;
 	width: 61%;
@@ -186,21 +190,21 @@ select {
 	outline: 0;
 	box-shadow: none;
 	border: 0 !important;
-	background: red;
+	background: inherit;
 	background-image: none;
 }
 /* Remove IE arrow */
 select::-ms-expand {
-	display: none;
+	display: none;	top: 1px;
 }
 /* Custom Select */
 .select {
 	position: relative;
 	display: flex;
 	width: 100px;
-	height: 88px;
+	height: 84.5px;
 	line-height: 3;
-	background: red;
+	background: rgb(255, 255, 255);
 	overflow: hidden;
 	border-radius: .25em;
 	position: absolute;
@@ -209,15 +213,16 @@ select::-ms-expand {
 }
 @-moz-document url-prefix() {
 	.select {
-		height: 83px;
+		height: 80px;
 	}
 }
 select {
 	flex: 1;
 	padding: 0 .5em;
-	color: #fff;
+	color: rgb(255, 0, 0);
 	cursor: pointer;
 	font-size: 1em;
+	border-color: 3px solid red;
 }
 /* Arrow */
 .select::after {
@@ -226,8 +231,8 @@ select {
 	top: 0;
 	right: 0;
 	padding: 0 0em;
-	background: rgb(255, 0, 0);
-	color: #fff;
+	background: inherit;
+	color: rgb(255, 0, 0);
 	cursor: pointer;
 	pointer-events: none;
 	-webkit-transition: .25s all ease;
@@ -250,7 +255,7 @@ select {
 		margin: 0 auto;
 	}
 	input.calc-inp {
-		background: red;
+		background: inherit;
 		color: #fff;
 	}
 	.main-content {
@@ -266,14 +271,14 @@ select {
     position: relative;
   } */
 }
-
+input[type="text"]:disabled{background-color:rgb(233, 224, 224);}
 @media (max-width: 578px) {
 	.main-content {
 		position: relative;
 		margin: 3em 0;
 		height: 400px;
 		width: 100%;
-		background: red;
+		background: inherit;
 	}
 	.main-content .calc {
 		position: absolute;
@@ -281,7 +286,7 @@ select {
 		height: 200px;
 	}
 	label {
-		background: red !important;
+		background: inherit !important;
 	}
 	#rate {
 		display: none;

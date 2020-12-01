@@ -1,6 +1,6 @@
 // import {  } from 'chart.js'
 import React, { Component } from 'react'
-import { Line, defaults } from 'react-chartjs-2'
+import { Line, defaults,Bar } from 'react-chartjs-2'
 
 defaults.global.legend.display = false
 defaults.scale.ticks.display = false
@@ -26,7 +26,34 @@ class Chart extends Component {
 	render() {
 		return (
 			<div className='chart'>
-				<Line
+				{this.props.chart ?
+				  <Bar
+				  data={this.state.chartData}
+				  options={{
+					  title: {
+						  display: this.props.displayTitle,
+						  text: 'Largest Cities In ' + this.props.location,
+						  fontSize: 25
+					  },
+					  legend: {
+						  display: this.props.displayLegend,
+						  position: this.props.legendPosition
+					  },
+					  hover: {
+						  mode: 'index'
+					  },
+					  layout: {
+						  padding: {
+							  left: 0,
+							  right: 0,
+							  top: 20,
+							  bottom: 0
+						  }
+					  }
+				  }}
+				/>
+				
+				:<Line
 					data={this.state.chartData}
 					options={{
 						title: {
@@ -50,7 +77,8 @@ class Chart extends Component {
 							}
 						}
 					}}
-				/>
+				/>}
+				
 			</div>
 		)
 	}

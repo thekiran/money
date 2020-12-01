@@ -25,6 +25,11 @@ const Navbar = () => {
 				<ul className='nav-list '>
 					<li className='nav'>
 						<Link className='nav-link' to='instructions'>
+							Home
+						</Link>
+					</li>
+					<li className='nav'>
+						<Link className='nav-link' to='instructions'>
 							Help
 						</Link>
 					</li>

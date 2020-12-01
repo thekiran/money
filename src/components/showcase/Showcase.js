@@ -33,7 +33,7 @@ const Showcase = () => {
 
 	const data = {
 		chartData: {
-			labels: [ date, day2, day3, day4, day5, day6 ],
+			labels: [   day6,day5 ,day4,day3, day2,date ],
 			datasets: [
 				{
 					// label: 'Population',
@@ -94,8 +94,9 @@ const Showcase = () => {
 	// 	[ rates ]
 	// )
 	return (
+		<div>
 		<div className='showcase-container'>
-			<div className='showcase-content'>
+			<div className='showcase-content left'>
 				<div className='show-content'>
 					<h6 className='show-title'>We use the real exchange rate.</h6>
 					<div className='show-stats'>
@@ -106,19 +107,41 @@ const Showcase = () => {
 						</span>
 					</div>
 				</div>
+				<div className="show-cont">
 				<div className='show-box'>
 					<Chart chartData={data.chartData} location='Massachusetts' legendPosition='bottom' />
+				</div> 
 				</div>
+				
 				<div className='btn-track'>
 					<a
 						target='_blank'
 						rel='noopener noreferrer'
 						href='https://transferwise.com/tools/exchange-rate-alerts/'>
 						Track this change
-					</a>{' '}
+					</a> 
 				</div>
 			</div>
-			<div className='text-container'>
+			
+			<div className='showcase-content side'>
+			<div className='show-content'>
+					<h6 className='show-title'>We use the real exchange rate.</h6>
+					<div className='show-stats'>
+						<span>As of 1 min ago, 1 USD → 0.85 EUR</span>
+						<span>
+							Mid market rate ?
+							<span className='circle'>{/* ?<i class='fas fa-question'></i> */}</span>
+						</span>
+					</div>
+				</div>
+				<div className="show-cont">
+				<div className='show-box'>
+					<Chart chartData={data.chartData} location='Massachusetts' legendPosition='bottom' chart={true} />
+				</div> 
+				</div>
+			</div>
+			
+			</div><div className='text-container'>
 				<div className='show-text'>
 					<h6>No hidden fees.</h6>
 					<p>
