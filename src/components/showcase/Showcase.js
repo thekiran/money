@@ -93,10 +93,19 @@ const Showcase = () => {
 	// 	},
 	// 	[ rates ]
 	// )
+	const handleClick = (e) => {
+		console.log(e.target)
+		e.target.parentElement.classList.add('active')
+	}
+	const removeAct = (e) => {
+		console.log(e.target)
+		e.target.parentElement.classList.remove('active')
+	}
 	return (
 		<div>
 		<div className='showcase-container'>
-			<div className='showcase-content left'>
+			<div className='showcase-content left'> 
+			<span id="close" onClick={removeAct}></span>
 				<div className='show-content'>
 					<h6 className='show-title'>We use the real exchange rate.</h6>
 					<div className='show-stats'>
@@ -113,17 +122,16 @@ const Showcase = () => {
 				</div> 
 				</div>
 				
-				<div className='btn-track'>
-					<a
-						target='_blank'
-						rel='noopener noreferrer'
-						href='https://transferwise.com/tools/exchange-rate-alerts/'>
-						Track this change
-					</a> 
-				</div>
+				{/* <div className='btn-track'>
+					
+				</div> */}
+				<button onClick={handleClick} className="btn-track">
+						Zoom
+					</button> 
 			</div>
 			
 			<div className='showcase-content side'>
+			<span id="close" onClick={removeAct}></span>
 			<div className='show-content'>
 					<h6 className='show-title'>We use the real exchange rate.</h6>
 					<div className='show-stats'>
@@ -139,6 +147,10 @@ const Showcase = () => {
 					<Chart chartData={data.chartData} location='Massachusetts' legendPosition='bottom' chart={true} />
 				</div> 
 				</div>
+				
+				<button onClick={handleClick} className="btn-track">
+						Zoom
+					</button> 
 			</div>
 			
 			</div><div className='text-container'>
