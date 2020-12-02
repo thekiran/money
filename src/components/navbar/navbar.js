@@ -24,9 +24,9 @@ const Navbar = () => {
 				</div>
 				<ul className='nav-list '>
 					<li className='nav'>
-						<a href="">
+					<Link className='nav-link'>
 							Home
-						</a>
+						</Link>
 					</li>
 					<li className='nav'>
 						<Link className='nav-link' to='instructions'>
