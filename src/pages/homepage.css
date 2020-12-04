@@ -16,6 +16,7 @@
 	max-width: 1400px;
 	margin: 0 auto; 
 	border-bottom: 2px solid rgba(255, 255, 255, 0.288);
+	overflow: hidden;
 }
 
 .log h5{
@@ -27,15 +28,21 @@
 }
 .na {
 	list-style: none;
+	background: rgb(104, 75, 75);
+	color: rgb(212, 202, 202);
+	height: 100%;
 }
 .na.active{
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(179, 173, 173, 0.377);
+	color: rgba(0, 0, 0, 0.589);
 }
 .nav-lin{
-	padding: 0 100px;
-	/* background: rgb(168, 165, 165); */
-	font-size: 1.2em;
-	color: rgb(212, 202, 202);
+	padding: 10px 50px;
+	font-size: 1em;
+	font-weight: 600;
+	color:inherit;
+	width: 250px;
+	background: inherit;
 }
 .nav-lin:hover{
 	color: #fff;

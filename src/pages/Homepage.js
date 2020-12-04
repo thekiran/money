@@ -13,7 +13,7 @@ import './homepage.css'
 import Platform from '../components/platform/Platform'
 import { useState } from 'react'
 import Fadecontent from './Fadecontent'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { useRef } from 'react'
 // import ScrollMagic from 'react-scrollmagic'
 // import ScrollMagic from 'scrollmagic'
@@ -71,14 +71,20 @@ const Homepage = () => {
 				</div>
 				<ul className='nav-lis'>
 					<li onClick={navParallax} className={`na ${paraContent ? 'active' :null}`}>
-					<Link to="mp" className='nav-lin'>
+						
+					{/* <Link to="mp" className='nav-lin'> */}
+						<button  className='nav-lin'>
 							Parallax
-						</Link>
+						</button>
+						{/* </Link> */}
 					</li>
 					<li onClick={navScroll} className={`na ${fadeContent ? 'active' :null}`}>
-						<Link to="m" className='nav-lin' to='instructions'>
+					
+							{/* <Link to="m" className='nav-lin'> */}
+								<button  className='nav-lin'>
 							Fade
-						</Link>
+							</button>
+						{/* </Link> */}
 					</li>
 				 
 				</ul>
