@@ -1,49 +1,70 @@
-import React, { useRef, useCallback } from 'react'
-import one from '../../img/bank.svg'
-import two from '../../img/school.svg'
-import three from '../../img/money.svg'
-import four from '../../img/about.svg'
-import five from '../../img/calculator.svg'
-import six from '../../img/report.svg'
+import React, { useRef, useCallback, useEffect } from 'react'
+import one from '../../../img/about.svg'
+import two from '../../../img/school.svg'
+import three from '../../../img/money.svg'
+import four from '../../../img/about.svg'
+import five from '../../../img/calculator.svg'
+import six from '../../../img/report.svg'
 import './instruction.css'
 
-const Instruction = () => {
-	// const observer = useRef(
-	// 	new IntersectionObserver(
-	// 		(entries) => {
-	// 			if (entries[0].isIntersecting) {
-	// 				// console.log(entries[0].target.children[1].children)
-	// 				entries[0].target.children[0].classList.add('anim')
-	// 				entries[0].target.children[1].children[0].classList.remove('left')
-	// 				entries[0].target.children[1].children[1].classList.remove('up')
-	// 				entries[0].target.children[1].children[2].classList.remove('right')
-	// 				// entries[0].target.children[1].classList.add('anim')
-	// 			} else {
-	// 				// console.log(entries[0].target)
-	// 				entries[0].target.children[0].classList.remove('anim')
-	// 				entries[0].target.children[1].children[0].classList.add('left')
-	// 				entries[0].target.children[1].children[1].classList.add('up')
-	// 				entries[0].target.children[1].children[2].classList.add('right')
-	// 				// entries[0].target.children[1].classList.remove('anim')
-	// 			}
-	// 		},
-	// 		{
-	// 			// rootMargin: '0px 0px -300px 0px'
-	// 			threshold: 0.5
-	// 		}
-	// 	)
-	// )
-	// // eslint-disable-next-line
-	// const obs = useCallback((node) => {
-	// 	if (observer.current) observer.current.observe(node)
+const Instruction = (cont) => {
+	const observer = useRef(
+		new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					console.log(entries[0].target.children[1].children)
+					entries[0].target.children[0].classList.add('anim')
+					entries[0].target.children[1].children[0].classList.remove('left')
+					entries[0].target.children[1].children[1].classList.remove('up')
+					entries[0].target.children[1].children[2].classList.remove('right')
+					// entries[0].target.children[1].classList.add('anim')
+				} else {
+					// console.log(entries[0].target)
+					entries[0].target.children[0].classList.remove('anim')
+					entries[0].target.children[1].children[0].classList.add('left')
+					entries[0].target.children[1].children[1].classList.add('up')
+					entries[0].target.children[1].children[2].classList.add('right')
+					// entries[0].target.children[1].classList.remove('anim')
+				}
+			},
+			{
+				// rootMargin: '0px 0px -300px 0px'
+				threshold: 0.5
+			}
+		)
+	)   
+
+	let	obs = useCallback((node) => { 
+		// initobs(node)
+		
+		if(observer.current && node !== null) {
+			// console.log(node)
+			observer.current.observe(node)
+			// console.log(observer.current)
+		 
+		}else{
+			// console.log('none')
+		}
+		// else if(observer.current && observer.current !== null){
+		// 	console.log(node)
+		// 		//
+		// }
+		
+	})   
+	// useEffect(()=>{
+	// 	window.onload(e=>{
+	// 		const t = document.querySelector("ins-content")
+		
+	// 		console.log(t);
+	// 	})
+		
 	// })
-	let obs;
 	return (
 		<div id='instructions' className='instruction-container'>
 			<div ref={obs} className='ins-content'>
-				<h1 className='inst-title anim'>How to send money from USD to EUR.</h1>
+				<h1 className='inst-title'>How to send money from USD to EUR.</h1>
 				<div className='int-grid'>
-					<div className='inst-cover'>
+					<div className='inst-cover left'>
 						<div className='inst-one'>
 							<img src={one} alt='school' className='inst-img' />
 							<h6>1. Register for free.</h6>
@@ -53,7 +74,7 @@ const Instruction = () => {
 							</p>
 						</div>
 					</div>
-					<div className='inst-cover'>
+					<div className='inst-cover up'>
 						<div className='inst-two'>
 							<img src={two} alt='school' className='inst-img' />
 							<h6>2. Choose an amount to send.</h6>
@@ -64,7 +85,7 @@ const Instruction = () => {
 						</div>
 					</div>
 
-					<div className='inst-cover'>
+					<div className='inst-cover right'>
 						<div className='inst-three'>
 							<img src={three} alt='school' className='inst-img' />
 							<h6>3. Add recipient’s bank details.</h6>

@@ -1,9 +1,66 @@
-#main {
-	position: absolute;
-	top: 200%;
-	z-index: 9999999;
+.m{} 
+.nav-cont{
+	width: 100vw;
+	background: rgb(0, 0, 0);
+	font-family: cursive;
+	position: sticky;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	height: 50px; 
+}
+.m-nav{
+	background: rgb(104, 75, 75);
+	display: flex;
+	justify-content: space-between;
+	max-width: 1400px;
+	margin: 0 auto; 
+	border-bottom: 2px solid rgba(255, 255, 255, 0.288);
 }
 
-#animation h1 {
-	color: red;
+.log h5{
+	padding: 10px;
+	color: rgb(212, 202, 202);
 }
+.nav-lis{
+	display: flex;
+}
+.na {
+	list-style: none;
+}
+.na.active{
+	background: rgba(0, 0, 0, 0.25);
+}
+.nav-lin{
+	padding: 0 100px;
+	/* background: rgb(168, 165, 165); */
+	font-size: 1.2em;
+	color: rgb(212, 202, 202);
+}
+.nav-lin:hover{
+	color: #fff;
+}
+.m-p{
+	position: relative;
+	z-index: 1;
+} 
+.m-p .m-bg{
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	bottom: -25%; 
+	background-image: url('../img/bg.jpg');
+	opacity: 0.2;
+	/* background-position: fixed; */
+	/* background-attachment: fixed; */
+	background-repeat: repeat;
+	/* background-size: cover; */
+	/* background-blend-mode: ; */
+	/* height: 100%; */
+	width: 100%; 
+	z-index: 1;
+} 
+.m-p .m-cont{ 
+	z-index: -1;
+} 

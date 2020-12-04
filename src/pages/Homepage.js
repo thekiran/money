@@ -1,43 +1,56 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 
 import Header from '../components/header/header'
 import About from '../components/about/About'
 import Instruction from '../components/instruction/Instruction'
 import Review from '../components/review/Review'
 import Showcase from '../components/showcase/Showcase'
-import Navbar from '../components/navbar/navbar'
+import Navbar from '../components/navbar/navbar' 
 import Footer from '../components/footer/Footer'
 // import { useEffect } from 'react'
 
 import './homepage.css'
+import Platform from '../components/platform/Platform'
+import { useState } from 'react'
+import Fadecontent from './Fadecontent'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 // import ScrollMagic from 'react-scrollmagic'
 // import ScrollMagic from 'scrollmagic'
 
 // import { Tween } from 'gsap/gsap-core'
 // import { TweenMax } from 'gsap/gsap-core'
 const Homepage = () => {
+	 
+	const [paraContent, setParaContent ] = useState(true)
+	const [fadeContent, setFadeContent ] = useState(false)
+	const [offsetY, setOffsetY] = useState(0)
+	
+	const handleScroll = () => setOffsetY(window.pageYOffset)
 	// React.useEffect(() => {
-	// 	const scrollAnimation = () => {
-	// 		// Init ScrollMagic Controller
-	// 		var scrollMagicController = new ScrollMagic()
-	// 		// Create Animation for 0.5s
-	// 		var tween = TweenMax.to('#animation', 0.5, {
-	// 			backgroundColor: 'rgb(255, 39, 46)',
-	// 			scale: 5,
-	// 			rotation: 360
-	// 		})
-	// 		// Create the Scene and trigger when visible
-	// 		var scene = new ScrollMagic.Scene({
-	// 			triggerElement: '#main',
-	// 			offset: 150 /* offset the trigger 150px below #scene's top */
-	// 		})
-	// 			.setTween(tween)
-	// 			.addTo(scrollMagicController)
-	// 		// Add debug indicators fixed on right side
-	// 		scene.addIndicators()
+	// 	if(paraContent){
+	// 	window.addEventListener("scroll",handleScroll)
 	// 	}
-	// 	scrollAnimation()
+
+	// 	return () => window.removeEventListener("scroll",handleScroll)
 	// }, [])
+	const navParallax = () => {
+		setFadeContent(false)
+		setParaContent(true)
+	}
+	const navScroll = () => {
+		setParaContent(false)
+		setFadeContent(true)
+	}
+	const m = useCallback((node)=>{
+		if(node !== null){
+			// console.log(node)
+			window.addEventListener("scroll",handleScroll)
+		} else if(node === null){
+			 window.removeEventListener("scroll",handleScroll)
+			//  console.log('list rem')
+		}
+	})
 	return (
 		<React.Fragment>
 			<header className='main-header'>
@@ -49,11 +62,57 @@ const Homepage = () => {
 					</div>
 				</main> */}
 			</header>
-			<Showcase />
-			<Instruction />
-			<About />
-			<Review />
-			<Footer />
+				<Showcase />
+		<div className="m" id="m">
+			<div className="nav-cont">
+			<div className="m-nav"> 
+			<div className='log'> 
+						<h5>Animation</h5>
+				</div>
+				<ul className='nav-lis'>
+					<li onClick={navParallax} className={`na ${paraContent ? 'active' :null}`}>
+					<Link to="mp" className='nav-lin'>
+							Parallax
+						</Link>
+					</li>
+					<li onClick={navScroll} className={`na ${fadeContent ? 'active' :null}`}>
+						<Link to="m" className='nav-lin' to='instructions'>
+							Fade
+						</Link>
+					</li>
+				 
+				</ul>
+			</div>
+				{/* <button 
+					// onClick={hamHandler}
+					className='hamburger hamburger--spin '
+					type='button'>
+					<span className='hamburger-box'>
+						<span className='hamburger-inner' />
+					</span>
+				</button> */}
+			</div> 
+			<div className="m-s" id="ms"> 
+				{fadeContent ? <Fadecontent cont={fadeContent} pc={paraContent}></Fadecontent> : null}
+			</div>
+			{paraContent ?
+			 	<div ref={m} className="m-p" id="mp">	
+				<div className="m-bg" 
+				style={{transform:`translateY(${offsetY * -0.5}px)`}}
+				></div>
+				<div className="m-cont" 
+				style={{transform:`translateY(${offsetY * -0}px)`}}
+				>
+				<Instruction />
+				<About />
+				<Review />
+				<Platform />
+				<Footer />
+				</div>
+		
+			</div> : null }
+		
+		</div>
 		</React.Fragment>
 	)
 }
