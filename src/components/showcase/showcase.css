@@ -60,11 +60,11 @@
 .showcase-content.left.active {
 	background: #000;
 	border-color: #fff; 
-	box-shadow: -20px 20px 30px 0px #000;
-	box-shadow: -60px 20px 50px 0px #000; 
+	/* box-shadow: -20px 20px 30px 0px #fff; */
+	/* box-shadow: -60px 30px 30px 0px rgba(255, 255, 255, 0.6);  */
 	border: 1px solid #fff;
-	border-left: 10px solid rgb(255, 255, 255);
-	border-bottom: 10px solid rgb(255, 255, 255); 
+	/* border-left: 10px solid rgb(255, 255, 255); */
+	/* border-bottom: 10px solid rgb(255, 255, 255);  */
 	height: 550px;
 	width: 900px;
 	transform:
@@ -74,6 +74,10 @@
 	 translateZ(40px);
 	 z-index: 100; 
 	 position: relative;
+	 box-shadow: 0px 0px 20px 0px #fff;
+	 /* border: 5px solid red; */
+	 border-left: 10px solid rgb(255, 255, 255);
+	 border-bottom: 10px solid rgb(255, 255, 255);
 } 
 
 .showcase-content.left.active #close::before{
