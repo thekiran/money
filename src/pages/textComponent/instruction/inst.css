@@ -1,52 +1,57 @@
-.instruction-container {
+.instruction-container-text {
 	width: 100vw;
 	margin: 0;
 	padding: 1em 0 3em 0;
-	font-family: 'Roboto'; 
-	/* background: #000; */
+	font-family: 'Roboto';
+	/* background: #f8000048; */
+	background: #000;
 	color: #fff;
 	perspective: 1000px;
 }
 
-.ins-content {
+.instruction-container-text .ins-content {
 	max-width: 1300px;
 	margin: 0 auto;
 	/* background: rgba(253, 5, 5, 0.212); */
 	padding: 0 0 20px 0;
 }
-.ins-content .inst-title {
+.instruction-container-text .ins-content .inst-titl {
 	display: block;
 	/* background: #000; */
 	margin: 2em auto;
-	width: fit-content;
-	transform: translateY(-100px);
-	opacity: 0;
-	transition: all 500ms;
+	max-width: 900px;; 
+	/* animation:typing 4s steps(34,end) forwards,
+	blink 1s infinite; */
+	animation:title 4s steps(34,end) forwards,
+	blink 5s; 
+	white-space:nowrap;
+	overflow: hidden;
+} 
+
+.instruction-container-text .ins-content .inst-titl.anim {
+	animation: none;
 }
-.ins-content .inst-title.anim {
-	opacity: 1;
-	transform: translateY(0);
-}
-.inst-one {
+
+.instruction-container-text .inst-one {
 	grid-area: one;
 }
-.inst-two {
+.instruction-container-text .inst-two {
 	grid-area: two;
 }
-.inst-three {
+.instruction-container-text .inst-three {
 	grid-area: three;
 }
-.inst-four {
+.instruction-container-text .inst-four {
 	grid-area: four;
 }
-.inst-five {
+.instruction-container-text .inst-five {
 	grid-area: five;
 }
-.inst-six {
+.instruction-container-text .inst-six {
 	grid-area: six;
 }
 
-.int-grid {
+.instruction-container-text .int-grid {
 	padding: 2em 0;
 	display: grid;
 	grid-template-areas: 'one two three' 'four five six';
@@ -56,7 +61,7 @@
 	/* background: white; */
 }
 
-.int-grid > div > div {
+.instruction-container-text .int-grid > div > div {
 	/* padding: 2em; */
 	margin: 20px 10px;
 	/* background-color: #1f66ad; */
@@ -71,7 +76,7 @@
 
 	transform-style: preserve-3d;
 }
-.int-grid > div > div:hover {
+.instruction-container-text .int-grid > div > div:hover {
 	/* transform: scale(1.1); */
 	/* width: 400px;
   height: 350px; */
@@ -79,27 +84,28 @@
 	/* box-shadow: 0 0 30px #fff; */
 	/* border: 3px solid rgba(255, 255, 0, 1); */
 }
-.inst-cover {
+.instruction-container-text .inst-cove {
 	padding: 1em;
-	background: inherit;
+	/* background: #000; */
 	/* animation: pulse 2s infinite; */
-	transform: translate(0);
+	/* transform: translate(0);
 	opacity: 1;
 	transition: all 500ms;
+	 */
 }
-.inst-cover.left {
+.instruction-container-text .inst-cove.left {
 	opacity: 0;
 	transform: translateX(-200px);
 }
-.inst-cover.up {
+.instruction-container-text .inst-cove.up {
 	opacity: 0;
 	transform: translateY(200px);
 }
-.inst-cover.right {
+.instruction-container-text .inst-cove.right {
 	opacity: 0;
 	transform: translateX(200px);
 }
-.inst-cover:hover {
+.instruction-container-text .inst-cove:hover {
 	animation: none;
 }
 @keyframes pulse {
@@ -113,7 +119,7 @@
 		transform: scale(99%);
 	}
 }
-.int-grid img {
+.instruction-container-text .int-grid img {
 	height: 90px;
 	width: 100px;
 	/* background: red; */
@@ -121,18 +127,36 @@
 	display: block;
 	margin: 1em auto;
 }
-.int-grid > div h6 {
+.instruction-container-text  .int-grid .inst-cove h6 {
 	/* background: red; */
 	width: fit-content;
 	display: block;
 	margin: 2em auto;
-}
-.int-grid > div p {
-	font-size: 0.7em;
+	
 	/* background: red; */
-	width: 90%;
+	max-width: 250px;
+	animation:title 4s steps(34,end) forwards,
+	blink 1s 3s; 
+	white-space:nowrap;
+	overflow: hidden;
+}
+
+.instruction-container-text  .int-grid .inst-cove.anim h6 {
+	animation: none;
+}
+.instruction-container-text .int-grid .inst-cove p {
+	font-size: 0.7em;
 	display: block;
 	margin: 0 auto 2em auto;
+	max-width: 250px;
+	animation: p 4s steps(34,end) forwards,
+	blink 1s 3s; 
+	/* white-space:nowrap; */
+	overflow: hidden;
+}
+
+.instruction-container-text .int-grid .inst-cove.anim p {
+	animation: none;
 }
 
 @media (max-width: 1300px) {
@@ -180,3 +204,35 @@
 		padding: 0;
 	}
 }
+
+@keyframes title {
+	0% { width:0% }
+	100% { width:100% }
+  }
+@keyframes p {
+	0% { width:0%;
+	max-height: 20px; }
+	20%{
+		max-height: 40px;
+	}
+	40%{
+		max-height: 60px;
+	}
+	50%{
+		max-height: 80px;
+	}
+	100% { width:100%;
+		max-height: auto;
+	 }
+  }
+
+
+
+  @keyframes blink {
+	0%,100% {
+	  border-right:2px solid transparent;
+	}
+	50% {
+	  border-right:2px solid rgb(255, 0, 0);
+	}
+  }

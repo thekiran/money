@@ -6,61 +6,49 @@ import Instruction from '../components/instruction/Instruction'
 import Review from '../components/review/Review'
 import Showcase from '../components/showcase/Showcase'
 import Navbar from '../components/navbar/navbar' 
-import Footer from '../components/footer/Footer'
-// import { useEffect } from 'react'
+import Footer from '../components/footer/Footer' 
 
-import './homepage.css'
 import Platform from '../components/platform/Platform'
 import { useState } from 'react'
-import Fadecontent from './Fadecontent'
-import { Link } from 'react-scroll'
-import { useRef } from 'react'
-// import ScrollMagic from 'react-scrollmagic'
-// import ScrollMagic from 'scrollmagic'
+import Fadecontent from './Fadecontent' 
+import './homepage.css'
+import TextContent from './TextContent'
 
-// import { Tween } from 'gsap/gsap-core'
-// import { TweenMax } from 'gsap/gsap-core'
 const Homepage = () => {
 	 
 	const [paraContent, setParaContent ] = useState(true)
 	const [fadeContent, setFadeContent ] = useState(false)
+	const [navContent, setNavContent ] = useState(false)
 	const [offsetY, setOffsetY] = useState(0)
 	
-	const handleScroll = () => setOffsetY(window.pageYOffset)
-	// React.useEffect(() => {
-	// 	if(paraContent){
-	// 	window.addEventListener("scroll",handleScroll)
-	// 	}
-
-	// 	return () => window.removeEventListener("scroll",handleScroll)
-	// }, [])
+	const handleScroll = () => setOffsetY(window.pageYOffset) 
 	const navParallax = () => {
 		setFadeContent(false)
 		setParaContent(true)
+		setNavContent(false)
 	}
 	const navScroll = () => {
 		setParaContent(false)
 		setFadeContent(true)
+		setNavContent(false)
+	}
+	const navText = () => {
+		setParaContent(false)
+		setFadeContent(false)
+		setNavContent(true)
 	}
 	const m = useCallback((node)=>{
-		if(node !== null){
-			// console.log(node)
+		if(node !== null){ 
 			window.addEventListener("scroll",handleScroll)
 		} else if(node === null){
-			 window.removeEventListener("scroll",handleScroll)
-			//  console.log('list rem')
+			 window.removeEventListener("scroll",handleScroll) 
 		}
 	})
 	return (
 		<React.Fragment>
 			<header className='main-header'>
 				<Navbar />
-				<Header />
-				{/* <main id='main' className='main'>
-					<div id='animation'>
-						<h1>0000000000</h1>
-					</div>
-				</main> */}
+				<Header /> 
 			</header>
 				<Showcase />
 		<div className="m" id="m">
@@ -87,6 +75,15 @@ const Homepage = () => {
 						{/* </Link> */}
 					</li>
 				 
+					<li onClick={navText} className={`na ${navContent ? 'active' :null}`}>
+					
+							{/* <Link to="m" className='nav-lin'> */}
+								<button  className='nav-lin'>
+							Text
+							</button>
+						{/* </Link> */}
+					</li>
+				 
 				</ul>
 			</div>
 				{/* <button 
@@ -104,10 +101,10 @@ const Homepage = () => {
 			{paraContent ?
 			 	<div ref={m} className="m-p" id="mp">	
 				<div className="m-bg" 
-				style={{transform:`translateY(${offsetY * -0.5}px)`}}
+				style={{transform:`translateY(${offsetY * -0.2}px)`}}
 				></div>
 				<div className="m-cont" 
-				style={{transform:`translateY(${offsetY * -0}px)`}}
+				style={{transform:`translateY(${offsetY * 0.1}px)`}}
 				>
 				<Instruction />
 				<About />
@@ -117,7 +114,11 @@ const Homepage = () => {
 				</div>
 		
 			</div> : null }
-		
+		<div className="m-t">
+				{navContent ? (
+					<TextContent />
+				):null}
+		</div>
 		</div>
 		</React.Fragment>
 	)

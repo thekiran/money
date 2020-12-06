@@ -1,29 +1,29 @@
-import React, { useRef, useCallback, useEffect } from 'react'
+import React, { useRef, useCallback } from 'react'
 import one from '../../../img/about.svg'
 import two from '../../../img/school.svg'
 import three from '../../../img/money.svg'
 import four from '../../../img/about.svg'
 import five from '../../../img/calculator.svg'
 import six from '../../../img/report.svg'
-import './instruction.css'
+import './inst.css'
 
-const Instruction = (cont) => {
+const Instruction = () => {
 	const observer = useRef(
 		new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					console.log(entries[0].target.children[1].children)
-					entries[0].target.children[0].classList.add('anim')
-					entries[0].target.children[1].children[0].classList.remove('left')
-					entries[0].target.children[1].children[1].classList.remove('up')
-					entries[0].target.children[1].children[2].classList.remove('right')
+					// console.log(entries[0].target.children[1].children)
+					entries[0].target.children[0].classList.remove('anim')
+					entries[0].target.children[1].children[0].classList.remove('anim')
+					entries[0].target.children[1].children[1].classList.remove('anim')
+					entries[0].target.children[1].children[2].classList.remove('anim')
 					// entries[0].target.children[1].classList.add('anim')
 				} else {
 					// console.log(entries[0].target)
-					entries[0].target.children[0].classList.remove('anim')
-					entries[0].target.children[1].children[0].classList.add('left')
-					entries[0].target.children[1].children[1].classList.add('up')
-					entries[0].target.children[1].children[2].classList.add('right')
+					entries[0].target.children[0].classList.add('anim')
+					entries[0].target.children[1].children[0].classList.add('anim')
+					entries[0].target.children[1].children[1].classList.add('anim')
+					entries[0].target.children[1].children[2].classList.add('anim')
 					// entries[0].target.children[1].classList.remove('anim')
 				}
 			},
@@ -32,39 +32,17 @@ const Instruction = (cont) => {
 				threshold: 0.5
 			}
 		)
-	)   
-
-	let	obs = useCallback((node) => { 
-		// initobs(node)
-		
-		if(observer.current && node !== null) {
-			// console.log(node)
-			observer.current.observe(node)
-			// console.log(observer.current)
-		 
-		}else{
-			// console.log('none')
-		}
-		// else if(observer.current && observer.current !== null){
-		// 	console.log(node)
-		// 		//
-		// }
-		
-	})   
-	// useEffect(()=>{
-	// 	window.onload(e=>{
-	// 		const t = document.querySelector("ins-content")
-		
-	// 		console.log(t);
-	// 	})
-		
-	// })
+	)
+	// eslint-disable-next-line
+	const obs = useCallback((node) => {
+		if (observer.current && node !== null) observer.current.observe(node)
+	}) 
 	return (
-		<div id='instructions' style={{background:'#000'}} className='instruction-container'>
+		<div id='instructions' className='instruction-container-text'>
 			<div ref={obs} className='ins-content'>
-				<h1 className='inst-title'>How to send money from USD to EUR.</h1>
+				<h1 className='inst-titl anim'>How to send money from USD to EUR.</h1>
 				<div className='int-grid'>
-					<div className='inst-cover left'>
+					<div className='inst-cove'>
 						<div className='inst-one'>
 							<img src={one} alt='school' className='inst-img' />
 							<h6>1. Register for free.</h6>
@@ -74,7 +52,7 @@ const Instruction = (cont) => {
 							</p>
 						</div>
 					</div>
-					<div className='inst-cover up'>
+					<div className='inst-cove'>
 						<div className='inst-two'>
 							<img src={two} alt='school' className='inst-img' />
 							<h6>2. Choose an amount to send.</h6>
@@ -85,7 +63,7 @@ const Instruction = (cont) => {
 						</div>
 					</div>
 
-					<div className='inst-cover right'>
+					<div className='inst-cove'>
 						<div className='inst-three'>
 							<img src={three} alt='school' className='inst-img' />
 							<h6>3. Add recipient’s bank details.</h6>
@@ -126,7 +104,7 @@ const Instruction = (cont) => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> 
 		</div>
 	)
 }

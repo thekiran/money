@@ -3,8 +3,7 @@
 	margin: 0;
 	padding: 1em 0 3em 0;
 	font-family: 'Roboto';
-	background: #f8000048;
-	background: #000;
+	background: transparent ;
 	color: #fff;
 	perspective: 1000px;
 }
@@ -82,7 +81,7 @@
 }
 .inst-cover {
 	padding: 1em;
-	background: #000;
+	background: #fff;
 	/* animation: pulse 2s infinite; */
 	transform: translate(0);
 	opacity: 1;

@@ -33,7 +33,7 @@ const About = () => {
 		// if (observer.current) observer.current.observe(node)
 	})
 	return (
-		<div className='about-container'>
+		<div style={{background:'transparent'}} className='about-container'>
 			<div className='about-content'>
 				<div ref={tar} className='about-show'>
 					<div className='about-text anim'>

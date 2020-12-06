@@ -1,35 +1,36 @@
 import React, { useRef, useCallback } from 'react'
+import gsap from 'gsap'
 
 import apple from './img/apple.svg'
 import google from './img/play.svg'
 
 import './platform.css'
 const Platform = () => {
-	// const observer = useRef(
-	// 	new IntersectionObserver(
-	// 		(entries) => {
-	// 			if (entries[0].isIntersecting) {
-	// 				// console.log(entries[0].target.children[0])
-	// 				// console.log(entries[0].target.children[1])
-	// 				entries[0].target.children[0].classList.remove('anim')
-	// 				entries[0].target.children[1].classList.remove('anim')
-	// 			} else {
-	// 				entries[0].target.children[0].classList.add('anim')
-	// 				entries[0].target.children[1].classList.add('anim')
-	// 			}
-	// 		},
-	// 		{
-	// 			threshold: 0.75
-	// 		}
-	// 	)
-	// )
-	// // eslint-disable-next-line
-	// const plat = useCallback((node) => {
-	// 	if (observer.current) observer.current.observe(node)
-	// })
-	let plat;
+	const observer = useRef(
+		new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					// console.log(entries[0].target.children[0])
+					// console.log(entries[0].target.children[1])
+					entries[0].target.children[0].classList.remove('anim')
+					// entries[0].target.children[1].classList.remove('anim')
+					gsap.from(".plat-head",{duration:'1',opacity: 0,scale:0 ,rotate:'180deg', ease:"power1"}) 
+				} else {
+					entries[0].target.children[0].classList.add('anim')
+					// entries[0].target.children[1].classList.add('anim')
+				}
+			},
+			{
+				threshold: 0.75
+			}
+		)
+	)
+	// eslint-disable-next-line
+	const plat = useCallback((node) => {
+		if (observer.current && node !== null) observer.current.observe(node)
+	}) 
 	return (
-		<div style={{background:'transparent'}} className='plat-container'>
+		<div className='plat-container'>
 			<div ref={plat} className='plat-content'>
 				<div className='plat'>
 					<div className='plat-head'>

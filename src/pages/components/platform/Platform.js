@@ -25,9 +25,7 @@ const Platform = () => {
 	)
 	// eslint-disable-next-line
 	const plat = useCallback((node) => {
-		
-		if(observer.current && node !== null)  observer.current.observe(node)
-	 
+		if(observer.current && node !== null) observer.current.observe(node)
 	}) 
 	return (
 		<div className='plat-container'>

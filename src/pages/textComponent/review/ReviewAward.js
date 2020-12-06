@@ -1,34 +1,36 @@
 import React, { useCallback, useRef } from 'react'
+import gsap from 'gsap'
 
 const ReviewAward = () => {
-	// const observer = useRef(
-	// 	new IntersectionObserver(
-	// 		(entries) => {
-	// 			if (entries[0].isIntersecting) {
-	// 				// console.log(entries[0].target)
-	// 				entries[0].target.children[0].classList.remove('anim')
-	// 				entries[0].target.children[1].children[0].classList.remove('anim')
-	// 				entries[0].target.children[1].children[1].classList.remove('mid')
-	// 				entries[0].target.children[1].children[2].classList.remove('right')
-	// 			} else {
-	// 				entries[0].target.children[0].classList.add('anim')
-	// 				entries[0].target.children[1].children[0].classList.add('anim')
-	// 				entries[0].target.children[1].children[1].classList.add('mid')
-	// 				entries[0].target.children[1].children[2].classList.add('right')
-	// 			}
-	// 		},
-	// 		{
-	// 			threshold: 0.75
-	// 		}
-	// 	)
-	// )
-	// // eslint-disable-next-line
-	// const aww = useCallback((node) => {
-	// 	if (observer.current) observer.current.observe(node)
-	// })
-	let aww;
+	const observer = useRef(
+		new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					// console.log(entries[0].target)
+					entries[0].target.children[0].classList.remove('anim')
+					// entries[0].target.children[1].children[0].classList.remove('anim')
+					// entries[0].target.children[1].children[1].classList.remove('mid')
+					// entries[0].target.children[1].children[2].classList.remove('right')
+					gsap.from(".review-content-tabs",{duration:'1',opacity: 0,scale:0 ,rotate:'180deg', ease:"power1"}) 
+					
+				} else {
+					entries[0].target.children[0].classList.add('anim')
+					// entries[0].target.children[1].children[0].classList.add('anim')
+					// entries[0].target.children[1].children[1].classList.add('mid')
+					// entries[0].target.children[1].children[2].classList.add('right')
+				}
+			},
+			{
+				threshold: 0.75
+			}
+		)
+	)
+	// eslint-disable-next-line
+	const aww = useCallback((node) => {
+		if (observer.current) observer.current.observe(node)
+	}) 
 	return (
-		<div style={{background:'transparent'}}  className='review-award-container '>
+		<div className='review-award-container '>
 			<div ref={aww} className='review-awards'>
 				<div className='review-head'>
 					<h2> TrustPilot score 4.7 out of 5, from 99,056 reviews</h2>
