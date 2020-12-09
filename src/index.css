@@ -13,8 +13,10 @@ html {
 }
 /* width */
 ::-webkit-scrollbar {
-	width: 10px;
-	background: #000;
+	width: 5px;
+	/* background: transparent; */
+	background-image: url('./img/herobg.jpg');
+	/* opacity: 0.1; */
 }
 
 /* Track */
@@ -25,13 +27,15 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: red;
+	background: rgba(255, 0, 0, 0.5);
+	background: #fff;
 	border-radius: 50%;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(255, 0, 0, 0.288);
+	background: #000;
 }
 
 .sweep-head {
@@ -88,18 +92,21 @@ body {
 	overflow-x: hidden;
 	background: #151615;
 	/* background: #ff333a; */
-	background: #b80006;
+	/* background: #b80006; */
 	/* background-color: #666666; */
 	/* background: #1e1e24; */
 	font-size: 25px;
+	text-shadow: 1px 1px #000;
 }
 .main-header {
 	padding: 0 0 5em 0;
 	margin-bottom: -4em;
-	background: #090302;
-	/* background: #2e2d2d; */
+	/* background: #090302; */
+	background: url('./img/bghero2.jpg') no-repeat center center/cover;
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
 	color: #fff;
-	color: red;
+	/* color: red; */
 	clip-path: polygon(0 0, 0 100%, 100% calc(100% - 7vw), 100% 0);
 	/* position: relative; */
 }

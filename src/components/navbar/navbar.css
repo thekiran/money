@@ -4,13 +4,15 @@
 	margin: 0em auto;
 	position: relative;
 	font-family: 'Syne Mono', monospace;
-	/* background: red; */
+	background: url('../../img/herobg.jpg') no-repeat rgba(0,0,0,0);
+	background-blend-mode: lighten; 
+	background-size: 350px 100px;
 	border-bottom: rgba(255, 255, 255, 0) 1px solid;
 	color: inherit;
+	width: 100vw;
 	/* color: #000; */
 	/* border-radius: 10%; */
-	/* position: relative; */
-	max-width: 1200px;
+	/* position: relative; *
 	/* z-index: 5000; */
 }
 .main-nav.is-active {
@@ -22,8 +24,10 @@
 .nav-container {
 	/* min-height: 200px; */
 	height: 100px;
-	width: 100%;
-	background: #000;
+	max-width: 1200px;
+	margin: 0 auto;
+	/* background: rgba(0, 0, 0, 0.205); */
+	/* background: transparent; */
 	display: flex;
 	justify-content: space-between;
 }
@@ -39,18 +43,17 @@
 	height: fit-content;
 	/* background: #000; */
 	width: fit-content;
-	margin: -1em auto 0 0;
-	color: #b80006;
+	margin: 20px 0;
+	color: inherit;
+	font-size: 2em;
 }
 .brand {
 	display: block;
 	width: 70px;
 	margin: 0 auto 0 0;
 	height: 80px;
-	object-fit: cover;
-	/* border-radius: 30px; */
-	padding: 1em 0;
-	/* background: #000; */
+	object-fit: cover; 
+	padding: 1em 0; 
 }
 
 .nav-list {
@@ -70,7 +73,7 @@ button {
 }
 .nav-list li .nav-link {
 	padding: 30px 50px;
-	color: #b80006;;
+	color: inherit;;
 	background: transparent;
 	font-size: 1.2rem;
 	border: none;

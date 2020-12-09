@@ -17,7 +17,7 @@ const Navbar = () => {
 		<div className='main-nav'>
 			<div className='nav-container'>
 				<div className='logo'>
-					<img src={brand} className='brand' alt='brand' />
+					{/* <img src={brand} className='brand' alt='brand' /> */}
 					<Link to='/'>
 						<h5>MoneyTransfer</h5>
 					</Link>

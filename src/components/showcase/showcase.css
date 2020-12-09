@@ -14,6 +14,7 @@
 	/* clip-path: polygon(0 0, 0 100%, 100% calc(100% - 5vw), 100% 0); */
 
 	/* background: #b80006; */
+	z-index: 100;
 }
 
 .showcase-content.left {
@@ -31,7 +32,7 @@
 	/* border-right: 5px solid rgb(255, 0, 0);
 	border-top: 5px solid rgb(255, 0, 0); */
 	/* transform: perspective(2000px) translateX(50%) scale(130%,110%) translateZ(500px); */
-	transition: all 500ms; 
+	transition: all 250ms; 
 	overflow: hidden;	
 	height: 450px;
 	width: 600px;
@@ -232,14 +233,17 @@
 .text-container {
 	/* height: 330px; */
 	width: 100vw;
-	background: #000;
-	color: red;
+	/* background: #000; */
+	background: url('../../img/bghero2.jpg') no-repeat center center/cover;
+	color: #fff;  
+	background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
 	/* clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 5vw) 0); */
 	/* clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0 100%); */
 	/* clip-path: polygon(0 40%, 100% 0%, 100% calc(100% - 5vw), 0% 100%); */
 }
 .show-text {
-	background: #000;
+	/* background: #000; */
 	max-width: 950px;
 	padding: 2em 0;
 	margin: 2em auto;

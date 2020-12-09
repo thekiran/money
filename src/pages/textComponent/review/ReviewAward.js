@@ -27,7 +27,7 @@ const ReviewAward = () => {
 	)
 	// eslint-disable-next-line
 	const aww = useCallback((node) => {
-		if (observer.current) observer.current.observe(node)
+		if (observer.current && node !== null) observer.current.observe(node)
 	}) 
 	return (
 		<div className='review-award-container '>

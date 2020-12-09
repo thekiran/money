@@ -20,7 +20,7 @@
 	align-items: center;
 	width: 100%;
 	margin: 0 0 0 1em;
-	color: #b80006;
+	color: inherit;
 }
 .head-title {
 	margin: 1em auto 1em 0;
@@ -55,6 +55,7 @@
 	height: 70%;
 	margin: 0 auto 0 auto;
 	position: relative;
+	color: red;
 }
 #rate {
 	/* background: #fff; */

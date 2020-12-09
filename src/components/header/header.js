@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { useEffect } from 'react'
+import gsap from 'gsap'
 
 import './header.css'
 
@@ -33,6 +34,12 @@ const Header = () => {
 			setToCurrency(firstCurrency)
 			setExchangeRate(data.rates[firstCurrency])
 		})
+		
+		gsap.from(".head-title",{duration:'2',x: -300,y: -300,ease:"elastic"})
+		gsap.from(".head-text",{duration:'1',opacity: 0.3,scale:0 ,x: -300,y: -300,ease:"back"})
+		// gsap.from(".tab-text",{duration:'1',opacity: 0,scale:0 ,x: 0,y: 0,ease:"power1"}) 
+		
+		// gsap.to(".review-title",{x: 0,y: 0})
 	}, [])
 
 	useEffect(
