@@ -1,3 +1,15 @@
+.show{
+	width: 100vw;
+	background: inherit;
+	/* backgr/ound: #b80006; */
+	/* background: url('../../img/to.jpg') no-repeat center center/cover !important; */
+	/* clip-path: polygon(calc(0 + 10vw) 0, 0 100%, 100% 100% , 100% 0); */
+
+    /* background-color: rgba(255, 255, 255, 1) !important; */
+    /* background-color: red !important; */
+    /* background-blend-mode: darken !important; */
+	
+}
 .showcase-container {
 	/* width; */
 	position: relative;
@@ -7,20 +19,25 @@
 	display: flex;
 	max-width: 1400px;
 	margin: 0 auto;
+	background: inherit;
 	/* padding: 5em 0; */
 	/* background: rgba(255, 0, 0, 0.185); */
 	/* background: rgba(0, 0, 0, 0.114); */
 	/* background: black; */
 	/* clip-path: polygon(0 0, 0 100%, 100% calc(100% - 5vw), 100% 0); */
 
-	/* background: #b80006; */
+
 	z-index: 100;
 }
 
 .showcase-content.left {
 	display: block;
-	background: #b80006;
-	background: inherit;
+	/* background: #b80006; */
+	/* background: inherit; */
+	background: url('./chart.jpg') no-repeat center center/cover;
+	color: rgba(255,255,255,0.6);  
+	background-color: rgba(0,0,0,0.7);
+	background-blend-mode: darken;
 	/* max-width: 950px; */
 	margin: 0 auto;
 	/* max-height: 850px; */
@@ -106,7 +123,11 @@
 .showcase-content.side {
 	display: inline-block;
 	background: #b80006;
-	background: inherit;
+	/* background: inherit; */
+	background: url('./chart.jpg') no-repeat center center/cover;
+	color: rgba(255,255,255,0.6);  
+	background-color: rgba(0,0,0,0.7);
+	background-blend-mode: darken;
 	/* background: #000; */
 	/* max-width: 950px; */
 	margin: 0 auto;
@@ -233,11 +254,12 @@
 .text-container {
 	/* height: 330px; */
 	width: 100vw;
-	/* background: #000; */
-	background: url('../../img/bghero2.jpg') no-repeat center center/cover;
-	color: #fff;  
-	background-color: rgba(0,0,0,0.7);
-    background-blend-mode: darken;
+	background: #000 !important;
+	/* background: url('../../img/to.jpg') no-repeat center center/cover; */
+	color: rgb(255,255,255);  
+	/* background-color: rgba(0,0,0,0.7); */
+	/* background-blend-mode: darken; */
+	margin-top: 0px;
 	/* clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 5vw) 0); */
 	/* clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0 100%); */
 	/* clip-path: polygon(0 40%, 100% 0%, 100% calc(100% - 5vw), 0% 100%); */

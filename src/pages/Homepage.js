@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useRef } from 'react'
+import gsap from 'gsap'
 
 import Header from '../components/header/header'
 import About from '../components/about/About'
@@ -44,6 +45,36 @@ const Homepage = () => {
 			 window.removeEventListener("scroll",handleScroll) 
 		}
 	})
+
+
+
+	const observer = useRef(
+		new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) { 
+					// entries[0].target.classList.remove('sc') 
+					// entries[0].target.classList.add('sc')
+					document.querySelector('.nav-cont').classList.remove('sc') 
+					
+					// gsap.from(".sc",{duration:'1',opacity: 0,scale:0 ,transform:'translate(-300px)', ease:"elastic"}) 
+		
+				} else { 
+					document.querySelector('.nav-cont').classList.add('sc') 
+					// entries[0].target.classList.remove('sc') 
+					// gsap.to(".nav-cont",{duration:'1',opacity: 0,scale:0 ,transform:'scale(4)', ease:"elastic"}) 
+		
+				}
+			},
+			{
+				rootMargin: '0px 0px -500px 0px'
+				// threshold: .1
+			}
+		)
+	)
+
+	const nav = useCallback((node) => {
+		if (observer.current && node !== null)  observer.current.observe(node)
+	})
 	return (
 		<React.Fragment>
 			<header className='main-header'>
@@ -51,12 +82,12 @@ const Homepage = () => {
 				<Header /> 
 			</header>
 				<Showcase />
-		<div className="m" id="m">
+		<div className="m" id="m" ref={nav}>
 			<div className="nav-cont">
 			<div className="m-nav"> 
-			<div className='log'> 
+			{/* <div className='log'> 
 						<h5>Animation</h5>
-				</div>
+				</div> */}
 				<ul className='nav-lis'>
 					<li onClick={navParallax} className={`na ${paraContent ? 'active' :null}`}>
 						
@@ -75,15 +106,13 @@ const Homepage = () => {
 						{/* </Link> */}
 					</li>
 				 
-					<li onClick={navText} className={`na ${navContent ? 'active' :null}`}>
+					{/* <li onClick={navText} className={`na ${navContent ? 'active' :null}`}>
 					
-							{/* <Link to="m" className='nav-lin'> */}
-								<button  className='nav-lin'>
+							<button  className='nav-lin'>
 							Text
 							</button>
-						{/* </Link> */}
 					</li>
-				 
+				  */}
 				</ul>
 			</div>
 				{/* <button 
@@ -101,10 +130,14 @@ const Homepage = () => {
 			{paraContent ?
 			 	<div ref={m} className="m-p" id="mp">	
 				<div className="m-bg" 
-				style={{transform:`translateY(${offsetY * 0.5}px)`}}
+				style={{transform:`translateY(${offsetY * -0.2}px)`}}
 				></div>
 				<div className="m-cont" 
-				// style={{transform:`translateY(${offsetY * 0.1}px)`}}
+				style={{
+					transform:`translateY(${offsetY * -0.5}px)`,
+					background:'transparent',
+					marginTop:'350px'
+				}}
 				>
 				<Instruction />
 				<About />

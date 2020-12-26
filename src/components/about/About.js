@@ -45,7 +45,7 @@ const About = () => {
 						<button className='about-btn'>Find out now</button>
 					</div>
 					<div className='about-img anim'>
-						<img src={about} alt='' className='ab' />
+						<img loading="lazy" src={about} alt='' className='ab' />
 					</div>
 				</div>
 			</div>

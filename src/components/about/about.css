@@ -1,7 +1,10 @@
 .about-container {
 	color: red;
-	background: #000;
+	background: inherit;
 	font-family: 'Roboto', sans-serif;
+	background: url('../../img/to.jpg') no-repeat center center/cover !important;
+	background-blend-mode: darken !important;
+	background-color: rgba(0,0,0,0.5) !important;
 }
 
 .about-content {

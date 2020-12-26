@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/money/static/css/main.70b61c49.chunk.css",
-    "main.js": "/money/static/js/main.8bee5b4e.chunk.js",
-    "main.js.map": "/money/static/js/main.8bee5b4e.chunk.js.map",
+    "main.css": "/money/static/css/main.bfde623c.chunk.css",
+    "main.js": "/money/static/js/main.92a217ac.chunk.js",
+    "main.js.map": "/money/static/js/main.92a217ac.chunk.js.map",
     "runtime-main.js": "/money/static/js/runtime-main.bfc33afe.js",
     "runtime-main.js.map": "/money/static/js/runtime-main.bfc33afe.js.map",
-    "static/js/2.18415525.chunk.js": "/money/static/js/2.18415525.chunk.js",
-    "static/js/2.18415525.chunk.js.map": "/money/static/js/2.18415525.chunk.js.map",
+    "static/js/2.671dd1e3.chunk.js": "/money/static/js/2.671dd1e3.chunk.js",
+    "static/js/2.671dd1e3.chunk.js.map": "/money/static/js/2.671dd1e3.chunk.js.map",
     "index.html": "/money/index.html",
-    "precache-manifest.97876ca7da7a17cb81c48c55a481ff3c.js": "/money/precache-manifest.97876ca7da7a17cb81c48c55a481ff3c.js",
+    "precache-manifest.a5f5794a2f0d0b870781fda2f7a1c8fc.js": "/money/precache-manifest.a5f5794a2f0d0b870781fda2f7a1c8fc.js",
     "service-worker.js": "/money/service-worker.js",
-    "static/css/main.70b61c49.chunk.css.map": "/money/static/css/main.70b61c49.chunk.css.map",
-    "static/js/2.18415525.chunk.js.LICENSE.txt": "/money/static/js/2.18415525.chunk.js.LICENSE.txt",
+    "static/css/main.bfde623c.chunk.css.map": "/money/static/css/main.bfde623c.chunk.css.map",
+    "static/js/2.671dd1e3.chunk.js.LICENSE.txt": "/money/static/js/2.671dd1e3.chunk.js.LICENSE.txt",
     "static/media/about.svg": "/money/static/media/about.0f9489d9.svg",
     "static/media/about.jpg": "/money/static/media/about.3e6a0f21.jpg",
     "static/media/apple.svg": "/money/static/media/apple.4c6b5dcc.svg",
     "static/media/bank.svg": "/money/static/media/bank.49c9d684.svg",
-    "static/media/homepage.css": "/money/static/media/bg.1595eb4f.jpg",
+    "static/media/index.css": "/money/static/media/bghero2.eb8191c2.jpg",
     "static/media/brand.png": "/money/static/media/brand.57cf6581.png",
     "static/media/calculator.svg": "/money/static/media/calculator.f64bde51.svg",
     "static/media/money.svg": "/money/static/media/money.3bb11a40.svg",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bfc33afe.js",
-    "static/js/2.18415525.chunk.js",
-    "static/css/main.70b61c49.chunk.css",
-    "static/js/main.8bee5b4e.chunk.js"
+    "static/js/2.671dd1e3.chunk.js",
+    "static/css/main.bfde623c.chunk.css",
+    "static/js/main.92a217ac.chunk.js"
   ]
 }

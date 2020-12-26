@@ -34,7 +34,7 @@ const Review = () => {
 	let rev;
 	return (
 		<Fragment>
-			<div ref={rev}  style={{background:'transparent'}}  className='review-container'>
+			<div ref={rev} style={{background:'rgba(0,0,0,0.5)'}}  className='review-container'>
 				<h2 className='review-title'>See what the world’s largest publications have to say</h2>
 
 				<div className='review-tabs'>

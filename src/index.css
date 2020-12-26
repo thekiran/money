@@ -13,9 +13,10 @@ html {
 }
 /* width */
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 7px;
 	/* background: transparent; */
-	background-image: url('./img/herobg.jpg');
+	/* background-image: url('./img/herobg.jpg'); */
+	background: #fff;
 	/* opacity: 0.1; */
 }
 
@@ -27,8 +28,8 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: rgba(255, 0, 0, 0.5);
-	background: #fff;
+	background: red;
+	/* background: rgb(0, 0, 0); */
 	border-radius: 50%;
 }
 
@@ -87,28 +88,32 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	width: 100vw;
-	height: auto;
+	width: 100vw; 
+	position: relative;
 	overflow-x: hidden;
-	background: #151615;
+	/* background: #fff; */
 	/* background: #ff333a; */
-	/* background: #b80006; */
-	/* background-color: #666666; */
-	/* background: #1e1e24; */
+	background: url('./img/to2.jpg') no-repeat center center/cover !important;
+    background-color: rgba(0,0,0,0.5) !important;
+    /* background-color: red !important; */
+    background-blend-mode: darken !important;
+	
 	font-size: 25px;
 	text-shadow: 1px 1px #000;
 }
 .main-header {
-	padding: 0 0 5em 0;
+	padding: 0 0 7em 0;
 	margin-bottom: -4em;
 	/* background: #090302; */
-	background: url('./img/bghero2.jpg') no-repeat center center/cover;
-    background-color: rgba(0,0,0,0.7);
-    background-blend-mode: darken;
+	background: url('./img/to.jpg') no-repeat center center/cover !important;
+    /* background-color: rgb(0,0,0) !important; */
+    /* background-color: red !important; */
+    background-blend-mode: lighten !important;
 	color: #fff;
-	/* color: red; */
-	clip-path: polygon(0 0, 0 100%, 100% calc(100% - 7vw), 100% 0);
+	  color: red;
+	clip-path: polygon(0 0, 0 100%, 93% calc(100% - 10vw), 100% 0);
 	/* position: relative; */
+		max-height: 1000px;
 }
 .space {
 	/* background: rgba(88, 88, 88, 0.986); */
@@ -117,6 +122,15 @@ body {
 	/* height: 100px; */
 	width: 100vw;
 	/* z-index: 2; */
+}
+#body-wrapper{
+	position: relative;
+	max-height: 4500px;
+	/* overflow: hidden;  */
+		/* background: url('./img/to2.jpg') no-repeat center center/cover;
+	color: rgba(255,255,255,0.6);  
+	background-color: rgba(0,0,0,0.5);
+	background-blend-mode: darken; */
 }
 @media (max-width: 500px) {
 	.main-header {

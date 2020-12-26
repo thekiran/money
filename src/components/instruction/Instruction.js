@@ -39,7 +39,7 @@ const Instruction = () => {
 	// })
 	let obs;
 	return (
-		<div id='instructions' className='instruction-container'>
+		<div id='instructions' style={{background:'rgba(0,0,0,0.5)'}} className='instruction-container'>
 			<div ref={obs} className='ins-content'>
 				<h1 className='inst-title anim'>How to send money from USD to EUR.</h1>
 				<div className='int-grid'>

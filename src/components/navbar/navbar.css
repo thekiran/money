@@ -4,10 +4,16 @@
 	margin: 0em auto;
 	position: relative;
 	font-family: 'Syne Mono', monospace;
-	background: url('../../img/herobg.jpg') no-repeat rgba(0,0,0,0);
-	background-blend-mode: lighten; 
-	background-size: 350px 100px;
-	border-bottom: rgba(255, 255, 255, 0) 1px solid;
+	background: url('../../img/to2.jpg');
+	/* opacity: ; */
+	 /* repeat 0% 10% rgba(0,0,0,0); */
+	background-blend-mode: darken; 
+	/* background-size: 350px 100px; */
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(0,0,0, 0.5) ;
 	color: inherit;
 	width: 100vw;
 	/* color: #000; */
@@ -30,10 +36,12 @@
 	/* background: transparent; */
 	display: flex;
 	justify-content: space-between;
+	color: #b80006;
 }
 .logo {
 	width: 400px;
 	height: 115px;
+	color: #b80006;
 	/* display: flex; */
 	/* background: rgb(252, 7, 7); */
 	/* align-items: center; */
@@ -44,7 +52,7 @@
 	/* background: #000; */
 	width: fit-content;
 	margin: 20px 0;
-	color: inherit;
+	color: #b80006;;
 	font-size: 2em;
 }
 .brand {

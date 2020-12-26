@@ -1,5 +1,9 @@
 .plat-container {
-	background: rgb(0, 0, 0);
+	/* background: rgb(0, 0, 0); */
+	
+	background: url('../../img/to.jpg') no-repeat center center/cover !important;
+	background-blend-mode: darken !important;
+	background-color: rgba(0,0,0,0.5) !important;
 	padding: 2em 0;
 	color: #fff;
 	font-family: 'Arial Narrow Bold', sans-serif;

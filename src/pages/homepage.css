@@ -1,5 +1,7 @@
 .m{
 	/* z-index: -1; */
+	position: relative;
+	display: block;
 } 
 .nav-cont{
 	width: 100vw;
@@ -10,16 +12,24 @@
 	right: 0;
 	z-index: 2;
 	margin-top: 0px;
-	height: 50px; 
+	height: 40px;   
+	opacity: 1;
+	transform: none;
+	transition: all 250ms;
 }
+.nav-cont.sc{
+	 opacity: 0.5;
+	 transform: translateX(-400px) translateY(300px) scale(0);
+	}
 .m-nav{
 	background: rgb(104, 75, 75);
 	display: flex;
-	justify-content: space-between;
-	max-width: 1400px;
-	margin: 0 auto; 
+	justify-content: flex-end;
+	max-width: 190px;
+	margin-left: auto;
+	margin-right: 150px;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.288);
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .log h5{
@@ -28,46 +38,56 @@
 }
 .nav-lis{
 	display: flex;
+	width: 100%;
+	height: 41px;
+	font-size: 0.7em;
 }
 .na {
 	list-style: none;
 	background: rgb(104, 75, 75);
 	color: rgb(212, 202, 202);
 	height: 100%;
+	width: 50%;
 }
 .na.active{
 	background: rgba(179, 173, 173, 0.377);
 	color: rgba(0, 0, 0, 0.589);
 }
 .nav-lin{
-	padding: 10px 50px;
+	all: unset;
+	padding: 10px 0px 10px 20px;
 	font-size: 1em;
 	font-weight: 600;
 	color:inherit;
-	width: 250px;
+	width: 100%;
 	background: inherit;
+	background: red;
+	/* margin: 0 10px 0 0; */
 }
 .nav-lin:hover{
 	color: #fff;
 }
 .m-p{
 	position: relative;
-	z-index: -1;
+	z-index: 1; 
+	max-height: 2350px;
+	/* overflow: hidden; */
 } 
 .m-p .m-bg{
 	position: absolute;
 	top: 0;
 	left: 0; 
-	background-image: url('../img/herobg.jpg');
-	opacity: 0.5;
-	/* background-position: fixed; */
-	/* background-attachment: fixed; */
-	background-repeat: repeat;
-	/* background-size: cover; */
+	background-image: url('../img/to2.jpg');
+	opacity: 1;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 	/* background-blend-mode: ; */
-	height: 3900px;
+	/* height: 3900px; */
+	height: 2000px;
 	width: 100%; 
-	margin-top: -2000px;
+	margin-top: -1000px;
 	z-index: -1;
 } 
 .m-p .m-cont{ 

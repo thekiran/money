@@ -1,7 +1,6 @@
 .review-container {
 	width: 100vw;
-	background: rgba(255, 0, 0, 0.308);
-	background: rgb(0, 0, 0);
+	/* background: rgb(0, 0, 0); */
 	color: #fff;
 	text-align: center;
 	padding: 2em 0 1em 0;

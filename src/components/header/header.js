@@ -64,7 +64,7 @@ const Header = () => {
 	}
 
 	return (
-		<Fragment>
+		<div className='header-sec'>
 			<div className='head-container'>
 				<div className='header-content'>
 					<h3 className='head-title'>A cheaper, faster way to send money abroad.</h3>
@@ -123,7 +123,7 @@ const Header = () => {
 					</button>
 				</div>
 			</div>
-		</Fragment>
+		</div>
 	)
 }
 

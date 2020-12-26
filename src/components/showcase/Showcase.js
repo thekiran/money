@@ -102,7 +102,7 @@ const Showcase = () => {
 		e.target.parentElement.classList.remove('active')
 	}
 	return (
-		<div>
+		<div className="show">
 		<div className='showcase-container'>
 			<div className='showcase-content left'> 
 			<span id="close" onClick={removeAct}></span>
@@ -153,8 +153,10 @@ const Showcase = () => {
 					</button> 
 			</div>
 			
-			</div><div className='text-container'>
+			</div>
+			<div className='text-container' >
 				<div className='show-text'>
+					{/* <h6></h6> */}
 					<h6>No hidden fees.</h6>
 					<p>
 						We’re on a mission to bring transparency to finance. We charge as little as possible, and we
