@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e942abdef39c2429b3af18422365d463",
+    "revision": "98faf683d7b8056ac43e6a29a897fc95",
     "url": "/money/index.html"
   },
   {
-    "revision": "2469945fd3538cafe66d",
-    "url": "/money/static/css/main.bfde623c.chunk.css"
+    "revision": "c52fc8cf88a059b73fb1",
+    "url": "/money/static/css/main.3d3e6696.chunk.css"
   },
   {
-    "revision": "3dfeadaafc185b34f251",
-    "url": "/money/static/js/2.671dd1e3.chunk.js"
+    "revision": "38c18105ee5d0b5363a3",
+    "url": "/money/static/js/2.20c56636.chunk.js"
   },
   {
     "revision": "7f9fbb19003dfaf8306d39e25a725e22",
-    "url": "/money/static/js/2.671dd1e3.chunk.js.LICENSE.txt"
+    "url": "/money/static/js/2.20c56636.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2469945fd3538cafe66d",
-    "url": "/money/static/js/main.92a217ac.chunk.js"
+    "revision": "c52fc8cf88a059b73fb1",
+    "url": "/money/static/js/main.19be44dc.chunk.js"
   },
   {
     "revision": "d185d1b1be10bc5f1891",
@@ -40,16 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/money/static/media/bank.49c9d684.svg"
   },
   {
-    "revision": "eb8191c270e54a2c4b86b2de4245601a",
-    "url": "/money/static/media/bghero2.eb8191c2.jpg"
-  },
-  {
     "revision": "57cf6581889db7d3210268530bce0065",
     "url": "/money/static/media/brand.57cf6581.png"
   },
   {
     "revision": "f64bde514d1f8ce730c3980f7fe1d142",
     "url": "/money/static/media/calculator.f64bde51.svg"
+  },
+  {
+    "revision": "0b2ec2452671c1a36a0dd8f43afe0bc7",
+    "url": "/money/static/media/chart.0b2ec245.jpg"
   },
   {
     "revision": "3bb11a40cbe37f4b2ca1c00cc39d5f3c",
@@ -66,5 +66,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5256400be97e1939695303c136d621f0",
     "url": "/money/static/media/school.5256400b.svg"
+  },
+  {
+    "revision": "d4509b3afd0923d77ab8d5da300eaa25",
+    "url": "/money/static/media/to.d4509b3a.jpg"
+  },
+  {
+    "revision": "3b3d6b7e531d6b33a258a447473fc174",
+    "url": "/money/static/media/to2.3b3d6b7e.jpg"
   }
 ]);
