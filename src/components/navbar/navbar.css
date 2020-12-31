@@ -4,16 +4,16 @@
 	margin: 0em auto;
 	position: relative;
 	font-family: 'Syne Mono', monospace;
-	background: url('../../img/to2.jpg');
+	/* background: url('../../img/to2.jpg'); */
 	/* opacity: ; */
 	 /* repeat 0% 10% rgba(0,0,0,0); */
-	background-blend-mode: darken; 
+	/* background-blend-mode: darken;  */
 	/* background-size: 350px 100px; */
-	background-position: center;
+	/* background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: rgba(0,0,0, 0.5) ;
+	background-color: rgba(0,0,0, 0.5) ; */
 	color: inherit;
 	width: 100vw;
 	/* color: #000; */

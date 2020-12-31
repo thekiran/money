@@ -157,11 +157,11 @@ const Showcase = () => {
 			<div className='text-container' >
 				<div className='show-text'>
 					{/* <h6></h6> */}
-					<h6>No hidden fees.</h6>
+					{/* <h6>No hidden fees.</h6>
 					<p>
 						We’re on a mission to bring transparency to finance. We charge as little as possible, and we
 						always show you upfront. No hidden fees. No bad exchange rates. No surprises.
-					</p>
+					</p> */}
 				</div>
 			</div>
 		</div>

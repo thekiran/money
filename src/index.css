@@ -94,16 +94,16 @@ body {
 	/* background: #fff; */
 	/* background: #ff333a; */
 	background: url('./img/to2.jpg') no-repeat center center/cover !important;
-    background-color: rgba(0,0,0,0.5) !important;
+    /* background-color: rgba(0,0,0,0.5) !important; */
     /* background-color: red !important; */
-    background-blend-mode: darken !important;
+    /* background-blend-mode: darken !important; */
 	
 	font-size: 25px;
 	text-shadow: 1px 1px #000;
 }
 .main-header {
-	padding: 0 0 7em 0;
-	margin-bottom: -4em;
+	padding: 0 0 8em 0;
+	margin-bottom: 0em;
 	/* background: #090302; */
 	background: url('./img/to.jpg') no-repeat center center/cover !important;
     /* background-color: rgb(0,0,0) !important; */

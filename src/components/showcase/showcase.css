@@ -34,9 +34,9 @@
 	display: block;
 	/* background: #b80006; */
 	/* background: inherit; */
-	background: url('./chart.jpg') no-repeat center center/cover;
-	color: rgba(255,255,255,0.6);  
-	background-color: rgba(0,0,0,0.7);
+	/* background: url('./chart.jpg') no-repeat center center/cover; */
+	color: rgb(255, 255, 255);  
+	background-color: rgba(0,0,0,0.2);
 	background-blend-mode: darken;
 	/* max-width: 950px; */
 	margin: 0 auto;
@@ -58,6 +58,8 @@
 }
 .showcase-content.left:hover { 
 	height: 500px;
+	background: #000;
+	color: #000;
 	/* border-top: 5px solid red; */
 	/* border-right: 1px solid rgb(255, 0, 0);
 	border-top: 1px solid rgba(255, 0, 0); */
@@ -76,6 +78,7 @@
 	/* margin: 0 auto; */ 
 } 
 .showcase-content.left.active {
+	color: #fff;
 	background: #000;
 	border-color: #fff; 
 	/* box-shadow: -20px 20px 30px 0px #fff; */
@@ -98,6 +101,9 @@
 	 border-bottom: 10px solid rgb(255, 255, 255);
 } 
 
+.showcase-content.left.active:hover{
+	color: #000;
+}
 .showcase-content.left.active #close::before{
 	font-family: Arial, Helvetica, sans-serif;
 	content: 'x';
@@ -124,10 +130,14 @@
 	display: inline-block;
 	background: #b80006;
 	/* background: inherit; */
-	background: url('./chart.jpg') no-repeat center center/cover;
-	color: rgba(255,255,255,0.6);  
-	background-color: rgba(0,0,0,0.7);
+	
+	color: rgb(255, 255, 255);  
+	background-color: rgba(0,0,0,0.2);
 	background-blend-mode: darken;
+	/* background: url('./chart.jpg') no-repeat center center/cover; */
+	/* color: rgba(255,255,255,0.6);   */
+	/* background-color: rgba(0,0,0,0.7); */
+	/* background-blend-mode: darken; */
 	/* background: #000; */
 	/* max-width: 950px; */
 	margin: 0 auto;
@@ -209,6 +219,8 @@
 }
 .showcase-content.side:hover{ 
 	height: 500px;
+	background: #000;
+	color: #000;
 }
 
 
@@ -241,11 +253,11 @@
 .btn-track {
 	display: none;
 	width: fit-content;
-	background: #000;
-	color: #fff;
-	box-shadow: 0 0 10px white;
+	background: rgb(255, 255, 255);
+	color: #000;
+	/* box-shadow: 0 0 10px white; */
 	padding: 0 0.5em;
-	margin: 0.5em auto;
+	margin: 1em auto;
 	font-size: 1.5em;
 }
 .showcase-content:hover .btn-track {
@@ -254,7 +266,7 @@
 .text-container {
 	/* height: 330px; */
 	width: 100vw;
-	background: #000 !important;
+	background: transparent !important;
 	/* background: url('../../img/to.jpg') no-repeat center center/cover; */
 	color: rgb(255,255,255);  
 	/* background-color: rgba(0,0,0,0.7); */

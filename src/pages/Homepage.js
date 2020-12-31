@@ -130,11 +130,11 @@ const Homepage = () => {
 			{paraContent ?
 			 	<div ref={m} className="m-p" id="mp">	
 				<div className="m-bg" 
-				style={{transform:`translateY(${offsetY * -0.2}px)`}}
+				style={{transform:`translateY(${offsetY * 0.5}px)`}}
 				></div>
 				<div className="m-cont" 
 				style={{
-					transform:`translateY(${offsetY * -0.5}px)`,
+					transform:`translateY(${offsetY * -0.7}px)`,
 					background:'transparent',
 					marginTop:'350px'
 				}}
