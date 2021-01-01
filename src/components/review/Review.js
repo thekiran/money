@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useCallback } from 'react'
+import React, { Fragment } from 'react'
 
 import './review.css'
 import ReviewAward from './ReviewAward'

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react'
-import gsap from 'gsap'
+// import gsap from 'gsap'
 
 import Header from '../components/header/header'
 import About from '../components/about/About'
@@ -33,18 +33,18 @@ const Homepage = () => {
 		setFadeContent(true)
 		setNavContent(false)
 	}
-	const navText = () => {
-		setParaContent(false)
-		setFadeContent(false)
-		setNavContent(true)
-	}
+	// const navText = () => {
+	// 	setParaContent(false)
+	// 	setFadeContent(false)
+	// 	setNavContent(true)
+	// }
 	const m = useCallback((node)=>{
 		if(node !== null){ 
 			window.addEventListener("scroll",handleScroll)
 		} else if(node === null){
 			 window.removeEventListener("scroll",handleScroll) 
 		}
-	})
+	},[])
 
 
 
@@ -74,7 +74,7 @@ const Homepage = () => {
 
 	const nav = useCallback((node) => {
 		if (observer.current && node !== null)  observer.current.observe(node)
-	})
+	},[observer])
 	return (
 		<React.Fragment>
 			<header className='main-header'>

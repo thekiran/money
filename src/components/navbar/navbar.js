@@ -1,6 +1,6 @@
 import React from 'react'
 
-import brand from '../../img/brand.png'
+// import brand from '../../img/brand.png'
 import { Link } from 'react-scroll'
 
 import './navbar.css'

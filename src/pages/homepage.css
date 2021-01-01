@@ -70,7 +70,7 @@
 .m-p{
 	position: relative;
 	z-index: 1; 
-	max-height: 2350px;
+	max-height: 2100px;
 	/* overflow: hidden; */
 } 
 .m-p .m-bg{
@@ -85,7 +85,7 @@
 	background-size: cover;
 	/* background-blend-mode: ; */
 	/* height: 3900px; */
-	height: 2000px;
+	height: 1000px;
 	width: 100%; 
 	margin-top: -1000px;
 	z-index: -1;

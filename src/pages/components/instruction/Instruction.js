@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect } from 'react'
+import React, { useRef, useCallback } from 'react'
 import one from '../../../img/about.svg'
 import two from '../../../img/school.svg'
 import three from '../../../img/money.svg'
@@ -36,21 +36,11 @@ const Instruction = (cont) => {
 
 	let	obs = useCallback((node) => { 
 		// initobs(node)
-		
-		if(observer.current && node !== null) {
-			// console.log(node)
-			observer.current.observe(node)
-			// console.log(observer.current)
-		 
-		}else{
-			// console.log('none')
-		}
-		// else if(observer.current && observer.current !== null){
-		// 	console.log(node)
-		// 		//
-		// }
-		
-	})   
+
+		if(observer.current && node !== null) { 
+			observer.current.observe(node) 
+		} 
+	},[observer])   
 	// useEffect(()=>{
 	// 	window.onload(e=>{
 	// 		const t = document.querySelector("ins-content")

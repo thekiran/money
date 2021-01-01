@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react'
+import React from 'react'
 import one from '../../img/bank.svg'
 import two from '../../img/school.svg'
 import three from '../../img/money.svg'

@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react'
+import React from 'react'
 
 import apple from './img/apple.svg'
 import google from './img/play.svg'

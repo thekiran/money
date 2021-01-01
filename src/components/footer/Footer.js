@@ -1,12 +1,12 @@
 import React from 'react'
-import Platform from '../platform/Platform'
+// import Platform from '../platform/Platform'
 
 import './footer.css'
 
 const Footer = () => {
 	return (
 		<footer>
-			<div className='footer-container'>
+			<div style={{background:'transparent'}} className='footer-container'>
 				<div className='footer-content'>
 					<div className='footer-links'>
 						<ul className='link-list'>

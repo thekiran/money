@@ -1,5 +1,5 @@
 import React from 'react'
-import Platform from '../platform/Platform'
+// import Platform from '../platform/Platform'
 
 import './footer.css'
 

@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<Platform />
-			<div className='footer-container'>
+			<div style={{background:'#000'}} className='footer-container'>
 				<div className='footer-content'>
 					<div className='footer-links'>
 						<ul className='link-list'>
